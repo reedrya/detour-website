@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detour</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Top Bar -->
+    <header class="topbar">
+        <a class="brand" href="#home" aria-label="Detour home">
+            <img
+                src="./assets/detour-logo.png"
+                alt="Detour logo"
+                class="brand__logo"
+            />
+        </a>
+          
+
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- Slide-out Menu + Backdrop -->
+    <div class="backdrop" data-close-menu></div>
+
+    <aside class="menu" aria-hidden="true">
+      <nav class="menu__nav" aria-label="Primary">
+        <a href="#about" class="menu__link">About</a>
+        <a href="#consignment" class="menu__link">Consignment</a>
+        <a href="#involved" class="menu__link">Get Involved</a>
+        <a href="#contact" class="menu__link">Contact Us</a>
+      </nav>
+    </aside>
+
+    <main>
+      <!-- HOME -->
+      <section
+        id="home"
+        class="section section--home"
+        style="--bg: url('./assets/mountaintop-1.jpg')"
+        aria-label="Home"
+      >
+        <div class="overlay overlay--dark"></div>
+
+        <div class="content content--center">
+          <img
+            class="home__logo"
+            src="./assets/detour-logo.png"
+            alt="Detour logo"
+          />
+          <h1 class="title title--xl">DETOUR.</h1>
+          <p class="subtitle subtitle--xl">
+            THE ALTERNATE ROUTE IN FINDING AFFORDABLE<br />
+            HIGH QUALITY OUTDOOR GEAR.
+          </p>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section
+        id="about"
+        class="section section--blur"
+        style="--bg: url('./assets/mountaintop-1.jpg')"
+        aria-label="About Detour"
+      >
+        <div class="overlay overlay--blur"></div>
+
+        <div class="content content--center narrow">
+          <h2 class="title">ABOUT DETOUR</h2>
+
+          <p class="subtitle">
+            Offering sustainable outdoor gear consignment services!
+          </p>
+
+          <p class="body">
+            IN USING WHAT GEAR WE ALREADY HAVE, WE ARE SUPPORTING A CIRCULAR
+            ECONOMY TO FIGHT THE ONGOING TAKE-MAKE-WASTE ECONOMY THAT IS MORE
+            PRESENT THAN EVER.
+          </p>
+
+          <p class="body">
+            SUSTAINABILITY IS AT THE CENTER OF OUR VALUES AND WE BELIEVE POSITIVE
+            CHANGE IS WITHIN REACH.
+          </p>
+
+          <p class="body">
+            TO LEARN MORE ABOUT OUR EFFORTS IN INFLUENCING A SUSTAINABLE FUTURE,
+            SEE “GET INVOLVED” OR VISIT OUR SOCIAL MEDIA!
+          </p>
+        </div>
+      </section>
+
+      <!-- CONSIGNMENT -->
+      <section
+        id="consignment"
+        class="section section--blur"
+        style="--bg: url('./assets/mountaintop-2.jpg')"
+        aria-label="Consignment"
+      >
+        <div class="overlay overlay--blur"></div>
+
+        <div class="content content--center">
+          <h2 class="title">WHAT IS CONSIGNMENT?</h2>
+          <p class="subtitle">LET'S BREAK IT DOWN INTO 3 STEPS.</p>
+
+          <div class="steps">
+            <article class="step">
+              <h3 class="step__title">STEP 1:</h3>
+              <p class="step__text">SET UP YOUR CONSIGNOR ACCOUNT!</p>
+              <div class="icon">
+                <!-- simple icon placeholder -->
+                <span aria-hidden="true">📝</span>
+              </div>
+            </article>
+
+            <article class="step">
+              <h3 class="step__title">STEP 2:</h3>
+              <p class="step__text">BRING IN YOUR GEAR AND WE WILL PICK OUT ITEMS TO SELL.</p>
+              <div class="icon"><span aria-hidden="true">🧰</span></div>
+            </article>
+
+            <article class="step">
+              <h3 class="step__title">STEP 3:</h3>
+              <p class="step__text">
+                ONCE YOUR ITEMS SELL, CASH OUT YOUR SHARE OR USE YOUR BALANCE IN-STORE FOR 10% OFF!
+              </p>
+              <div class="icon"><span aria-hidden="true">💵</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- GET INVOLVED -->
+      <section
+        id="involved"
+        class="section section--blur"
+        style="--bg: url('./assets/shack-w-person.jpg')"
+        aria-label="Get Involved"
+      >
+        <div class="overlay overlay--blur"></div>
+
+        <div class="content">
+          <h2 class="title">GET INVOLVED</h2>
+
+          <div class="involved-grid">
+            <div class="events">
+              <h3 class="kicker">UPCOMING EVENTS</h3>
+
+              <div class="cards">
+                <article class="card">
+                  <h4 class="card__title">DETOUR GRAND OPENING!!</h4>
+                  <img class="card__img" src="./assets/event1.jpg" alt="Store shelves with outdoor gear" />
+                </article>
+
+                <article class="card">
+                  <h4 class="card__title">BEACH CLEANUP: MM/DD</h4>
+                  <img class="card__img" src="./assets/event2.jpg" alt="People doing a beach cleanup" />
+                </article>
+
+                <article class="card">
+                  <h4 class="card__title">GUEST SPEAKER: RYAN REED</h4>
+                  <img class="card__img" src="./assets/event3.jpg" alt="Speaker in an auditorium" />
+                </article>
+              </div>
+            </div>
+
+            <div class="newsletter">
+              <h3 class="kicker">JOIN OUR NEWSLETTER!</h3>
+
+              <form class="form" id="newsletterForm">
+                <label class="label" for="name">NAME:</label>
+                <input class="input" id="name" name="name" type="text" placeholder="Your name" required />
+
+                <label class="label" for="email">EMAIL:</label>
+                <input class="input" id="email" name="email" type="email" placeholder="you@email.com" required />
+
+                <button class="btn" type="submit">SIGN UP</button>
+                <p class="form__msg" id="newsletterMsg" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="section section--blur"
+        style="--bg: url('./assets/shack.jpg')"
+        aria-label="Contact"
+      >
+        <div class="overlay overlay--blur"></div>
+
+        <div class="content contact">
+          <h2 class="title">CONTACT US</h2>
+
+          <div class="contact-grid">
+            <div class="contact-block">
+              <h3 class="kicker">LOCATION:</h3>
+              <p class="body">
+                Corvallis, OR
+              </p>
+            </div>
+
+            <div class="contact-block">
+              <h3 class="kicker">HOURS:</h3>
+              <p class="body">
+                S: 11A-5P &nbsp;&nbsp;&nbsp; T: 10A-6P<br />
+                M: 10A-6P &nbsp;&nbsp;&nbsp; F: CLOSED<br />
+                T: 10A-6P &nbsp;&nbsp;&nbsp; S: 11A-5P<br />
+                W: 10A-6P
+              </p>
+            </div>
+          </div>
+
+          <div class="reach">
+            <h3 class="kicker">REACH US AT:</h3>
+
+            <ul class="reach-list">
+              <li>📞 (818) 235-2133</li>
+              <li>✉️ detourgear@gmail.com</li>
+              <li>📷 @detour.og</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
